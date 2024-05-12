@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, makeStyles, Divider, useTheme, Box, useMediaQuery } from "@material-ui/core";
+import { Container, makeStyles, Divider, useTheme, Box, useMediaQuery } from "@material-ui/core";
 import Social from "../Social";
 
 const Footer = () => {
@@ -10,10 +10,7 @@ const Footer = () => {
         <Container>
             <Divider style={{ backgroundColor: theme.palette.primary.main }} />
             <Box className={classes.footer}>
-                {isMobile && <Social mobile />}
-                <Typography variant="body2" color="initial">
-                    © 2021 Mehdi BHA, Inc
-                </Typography>
+                <Social></Social>
             </Box>
         </Container>
     );
@@ -23,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
     footer: {
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(6),
+        display: "flex",
+        justifyContent: "right",
     },
 }));
 

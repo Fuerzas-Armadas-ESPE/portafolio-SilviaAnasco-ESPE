@@ -3,7 +3,6 @@ import { Typography, Button, makeStyles } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-scroll";
 import HomeContainer from "../../containers/HomeContainer";
-import VideoLogo from "../../components/VideoLogo";
 import { useTranslation } from "react-i18next";
 import loaderContext from "../../contexts/loaderContext";
 
@@ -47,7 +46,7 @@ const Home = () => {
                     , {t("home_i")}
                 </Typography>
                 <motion.div animate={controls} custom={1}>
-                    <VideoLogo />
+                    
                 </motion.div>
                 <Typography
                     component={motion.p}

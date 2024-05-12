@@ -99,6 +99,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: (props) => (props.isMobile ? "column" : "row"),
     },
     tabs: {
+        
         borderRight: (props) => (props.isMobile ? "none" : `1px solid ${theme.palette.secondary.main}`),
         borderBottom: (props) => (!props.isMobile ? "none" : `1px solid ${theme.palette.secondary.main}`),
         width: (props) => (props.isMobile ? "inherit" : "200px"),

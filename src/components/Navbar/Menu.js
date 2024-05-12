@@ -84,14 +84,7 @@ const Menu = ({homeIsActive}) => {
                     onSetActive={() => spyHandleChange(0)}
                     onSetInactive={()=>spyHandleChange(false)}
                 />
-                <StyledTab
-                    component={AnimatedLink}
-                    animate={controls}
-                    custom={1}
-                    to="experience"
-                    label={t('menu_experience')}
-                    onSetActive={() => spyHandleChange(1)}
-                />
+                
                 <StyledTab
                     component={AnimatedLink}
                     animate={controls}
@@ -109,17 +102,7 @@ const Menu = ({homeIsActive}) => {
                     onSetActive={() => spyHandleChange(3)}
                 />
             </StyledTabs>
-            <motion.div custom={4} animate={controls}>
-                <Button
-                    component={MuiLink}
-                    href="/resume.pdf"
-                    variant="outlined"
-                    color="primary"
-                    underline="none"
-                >
-                    {t('menu_resume')}
-                </Button>
-            </motion.div>
+            
             <motion.div custom={5} animate={controls}>
                 <LangSelector style={{ marginLeft: "32px" }} />
             </motion.div>
@@ -130,7 +113,7 @@ const Menu = ({homeIsActive}) => {
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         display: "flex",
-        alignItems: "center",
+        alignItems: "right",
     },
     tabs: {
         marginRight: theme.spacing(4),
